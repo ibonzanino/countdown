@@ -1,0 +1,133 @@
+:root {
+    --black: #4D4C59;
+    --purple: #6C63FF;
+    --light-grey: #C8C8C8;
+    --text-color: #9C9AB6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FFFFFF;
+    max-width: 1366px;
+    margin: 0 auto;
+}
+
+main{
+    margin-top: 1%;
+    margin-left: 10%;
+    display: grid;
+    grid-template-areas: 
+        "container rocket";
+}
+
+#container {
+    grid-area: container;
+    margin: 0;
+}
+
+#rocket {
+    grid-area: rocket;
+    margin-left: 2%;
+}
+
+#countdown {
+    margin-top: 8%;
+    display: grid;
+    grid-template-areas: 
+        "title"
+        "count"
+        "subscribe";
+}
+
+#title {
+    grid-area: title;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 54px;
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--purple);
+}
+
+#count {
+    grid-area: count;
+    margin-top: 3%;
+    display: grid;
+    grid-template-areas:
+        "days"
+        "times";
+}
+
+#days {
+    grid-area: days;
+    margin-left: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#times {
+    grid-area: times;
+    margin-left: 3%;
+    display: flex;
+    justify-content: space-between;
+}
+.subtime {
+    grid-area: days;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    color: var(--light-grey);
+}
+.time {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 72px;
+    line-height: 108px;
+    text-align: center;
+    color: var(--black);
+}
+
+#subscribe {
+    margin-top: 2%;
+    margin-left: 18%;
+}
+
+.info-sub {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--text-color);
+}
+
+#button {
+    margin-top: 3%;
+    margin-left: 25%;
+    background-color: var(--purple);
+    display: inline-block;
+    border-radius: 3px;
+    width: auto;
+    padding: 0.5em 0.8em;
+}
+
+.sub {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: white;
+}
