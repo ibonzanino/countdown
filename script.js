@@ -10,19 +10,31 @@ function countDown() {
     const hour = min * 60;
     const day = hour * 24;
 
-    const daysDiff = Math.floor(diff / day);
-    const hoursDiff = Math.floor((diff % day) / hour);
-    const minutesDiff = Math.floor((diff % hour) / min);
-    const secondsDiff = Math.floor((diff % min) / sec);
+    let daysDiff = Math.floor(diff / day);
+    let hoursDiff = Math.floor((diff % day) / hour);
+    let minutesDiff = Math.floor((diff % hour) / min);
+    let secondsDiff = Math.floor((diff % min) / sec);
+
+    if (daysDiff < 10) {
+        daysDiff = '0' + daysDiff;
+    }
+    if (hoursDiff < 10) {
+        hoursDiff = '0' + hoursDiff;
+    }
+    if (minutesDiff < 10) {
+        minutesDiff = '0' + minutesDiff;
+    }
+    if (secondsDiff < 10) {
+        secondsDiff = '0' + secondsDiff;
+    }
     
-    times.innerHTML = `<p class="time">${daysDiff}</p>`
-    times.innerHTML += `<p class="time">${hoursDiff}</p>`
-    times.innerHTML += `<p class="time">${minutesDiff}</p>`
-    times.innerHTML += `<p class="time">${secondsDiff}</p>`
+    times.innerHTML = `<p class="time">${daysDiff}&nbsp;&#58;</p>`
+    times.innerHTML += `<p class="time">&nbsp;${hoursDiff}&nbsp;&#58;</p>`
+    times.innerHTML += `<p class="time">&nbsp;${minutesDiff}&nbsp;&#58;</p>`
+    times.innerHTML += `<p class="time">&nbsp;${secondsDiff}</p>`
 
 }
 
 setInterval(function () {
     countDown()
   }, 1000)
-  
