@@ -34,6 +34,7 @@ function countDown() {
     times.innerHTML += `<p class="time">&nbsp;${secondsDiff}</p>`
 
 }
+countDown();
 
 setInterval(function () {
     countDown()
