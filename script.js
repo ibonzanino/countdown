@@ -1,5 +1,5 @@
 const times = document.getElementById("times");
-const launch = new Date(2022, 1, 12, 0, 0, 0).getTime();
+const launch = new Date(2022, 07, 07, 0, 0, 0).getTime();
 
 function countDown() {
     const now = new Date().getTime();
